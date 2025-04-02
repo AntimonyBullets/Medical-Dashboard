@@ -20,13 +20,11 @@ npm run build
 - Patient monitoring interface
 - Medical data visualization with Recharts
 - Responsive design for various device sizes
-- SASS-based styling system
 
 ## Tech Stack
 
 - React 19
 - React Router
-- SASS for styling
 - Recharts for data visualization
 
 ## Project Structure
