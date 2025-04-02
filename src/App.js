@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { FiMenu, FiX } from 'react-icons/fi';
+import Header from './components/layout/Header';
+import Sidebar from './components/layout/Sidebar';
+import Dashboard from './pages/Dashboard';
+import './styles/main.scss';
 
 function App() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="app">
+        <Sidebar isOpen={sidebarOpen} />
+        <div className="main-content">
+          <Header />
+          <Dashboard />
+        </div>
+        
+        <button className="menu-toggle" onClick={toggleSidebar}>
+          {sidebarOpen ? <FiX /> : <FiMenu />}
+        </button>
+      </div>
+    </Router>
   );
 }
 
