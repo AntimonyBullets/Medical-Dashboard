@@ -2,6 +2,8 @@
 
 A modern React-based dashboard for medical professionals to monitor and manage patient data.
 
+🔗 **Live Demo:** [https://medical-dashboard-4dwj.onrender.com/](https://medical-dashboard-4dwj.onrender.com/)
+
 ## Quick Start
 
 ```bash
